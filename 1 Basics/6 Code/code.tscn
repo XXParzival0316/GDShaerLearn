@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://crutjihnljecl"]
+
+[ext_resource type="Texture2D" uid="uid://cdyvecy3j6pjh" path="res://icon.svg" id="1_jiiff"]
+[ext_resource type="Shader" uid="uid://cbjo3qa60oa8j" path="res://1 Basics/6 Code/code.gdshader" id="1_llfbv"]
+[ext_resource type="Shader" uid="uid://cpb0sabrwvxsa" path="res://1 Basics/6 Code/code_exercise.gdshader" id="3_dntjq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jiiff"]
+shader = ExtResource("1_llfbv")
+shader_parameter/size = 0.5
+shader_parameter/color = Color(0.89693093, 0.5140733, 0.64185447, 1)
+
+[sub_resource type="Gradient" id="Gradient_dntjq"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_r6niv"]
+gradient = SubResource("Gradient_dntjq")
+fill_from = Vector2(0.35470086, 0.7606838)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_llfbv"]
+shader = ExtResource("3_dntjq")
+shader_parameter/progress = 0.5000000074506
+shader_parameter/test_texture = SubResource("GradientTexture2D_r6niv")
+
+[node name="Code" type="Node2D" unique_id=481045290]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1173542705]
+visible = false
+material = SubResource("ShaderMaterial_jiiff")
+texture = ExtResource("1_jiiff")
+
+[node name="Camera2D" type="Camera2D" parent="Icon" unique_id=357399611]
+zoom = Vector2(5, 5)
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=617397744]
+material = SubResource("ShaderMaterial_llfbv")
+texture = ExtResource("1_jiiff")
