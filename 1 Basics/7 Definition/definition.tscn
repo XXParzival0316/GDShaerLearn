@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://csmjerdnexe3y"]
+
+[ext_resource type="Texture2D" uid="uid://cdyvecy3j6pjh" path="res://icon.svg" id="1_52ano"]
+[ext_resource type="Shader" uid="uid://c4v4kjn0gfo2p" path="res://1 Basics/7 Definition/definition.gdshader" id="1_xg3up"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0f0ap"]
+shader = ExtResource("1_xg3up")
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xg3up"]
+shader = ExtResource("1_xg3up")
+shader_parameter/progress = 0.60000000894072
+
+[node name="Definition" type="Node2D" unique_id=879027352]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1794260758]
+material = SubResource("ShaderMaterial_0f0ap")
+texture = ExtResource("1_52ano")
+
+[node name="Camera2D" type="Camera2D" parent="Icon" unique_id=340551590]
+zoom = Vector2(5, 5)
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1859520592]
+material = SubResource("ShaderMaterial_xg3up")
+position = Vector2(-182, -63)
+texture = ExtResource("1_52ano")
+polygon = PackedVector2Array(0.682106, 1.8788891, 126.54125, 2.8347816, 127.49714, 15.261383, 127.49714, 25.776196, 128.45303, 41.070473, 127.81577, 61.144207, 127.49714, 78.98753, 128.45303, 103.84073, 128.77167, 117.541855, 123.67358, 127.73804, -4.415989, 127.4194, -5.3718796, 116.267334, -5.3718796, 109.894714, -6.00914, 100.97305, -8.239555, 89.50235, -6.6464043, 82.8111, -6.9650345, 74.84534, -4.734619, 63.055996, -5.3718796, 49.99213, -5.3718796, 34.379227, -4.097355, 20.359474, -5.0532494, 7.9328747)
+uv = PackedVector2Array(0.682106, 1.8788891, 126.54125, 2.8347816, 127.49714, 15.261383, 127.49714, 25.776196, 128.45303, 41.070473, 127.81577, 61.144207, 127.49714, 78.98753, 128.45303, 103.84073, 128.77167, 117.541855, 123.67358, 127.73804, -4.415989, 127.4194, -5.3718796, 116.267334, -5.3718796, 109.894714, -6.00914, 100.97305, -8.239555, 89.50235, -6.6464043, 82.8111, -6.9650345, 74.84534, -4.734619, 63.055996, -5.3718796, 49.99213, -5.3718796, 34.379227, -4.097355, 20.359474, -5.0532494, 7.9328747)
