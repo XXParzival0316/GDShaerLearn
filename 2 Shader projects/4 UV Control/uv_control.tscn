@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://jpkybdbjx10f"]
+
+[ext_resource type="Texture2D" uid="uid://cdyvecy3j6pjh" path="res://icon.svg" id="1_j0p52"]
+[ext_resource type="Shader" uid="uid://cae7xkxlh1vvt" path="res://2 Shader projects/4 UV Control/uv_control.gdshader" id="2_i30eh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y3e6n"]
+shader = ExtResource("2_i30eh")
+shader_parameter/x = 0.6
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i30eh"]
+shader = ExtResource("2_i30eh")
+shader_parameter/x = 0.0
+
+[node name="UVControl" type="Node2D" unique_id=1621494474]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1116643574]
+material = SubResource("ShaderMaterial_y3e6n")
+texture = ExtResource("1_j0p52")
+
+[node name="Camera2D" type="Camera2D" parent="Icon" unique_id=1728995041]
+material = SubResource("ShaderMaterial_i30eh")
+zoom = Vector2(5, 5)
