@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://mv4d3m3r1jna"]
+
+[ext_resource type="Shader" uid="uid://ub2fxvjrpfho" path="res://2 Shader projects/6 Dissolve/dissolve.gdshader" id="1_08tnd"]
+[ext_resource type="Texture2D" uid="uid://cdyvecy3j6pjh" path="res://icon.svg" id="1_6621t"]
+[ext_resource type="Script" uid="uid://cabgcnple4awl" path="res://2 Shader projects/6 Dissolve/dissolve.gd" id="1_soh7h"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_soh7h"]
+noise_type = 0
+frequency = 0.0013
+fractal_gain = 0.25
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_08tnd"]
+noise = SubResource("FastNoiseLite_soh7h")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6621t"]
+shader = ExtResource("1_08tnd")
+shader_parameter/noise = SubResource("NoiseTexture2D_08tnd")
+shader_parameter/progress = 0.8400000399
+shader_parameter/gradient_progress = 0.50000002375
+shader_parameter/dissolve_color = Color(0.47058824, 0.8627451, 0.4, 1)
+
+[node name="Dissolve" type="Node2D" unique_id=1366949376]
+script = ExtResource("1_soh7h")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=924459830]
+material = SubResource("ShaderMaterial_6621t")
+texture = ExtResource("1_6621t")
+
+[node name="Camera2D" type="Camera2D" parent="Sprite2D" unique_id=221442162]
+zoom = Vector2(5, 5)
