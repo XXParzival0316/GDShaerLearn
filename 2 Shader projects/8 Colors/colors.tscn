@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://d2ig51tyf0qbc"]
+
+[ext_resource type="Shader" uid="uid://bcdp3jqgkihlw" path="res://2 Shader projects/8 Colors/colors.gdshader" id="1_80v4j"]
+[ext_resource type="Texture2D" uid="uid://cxtkhi3ely486" path="res://2 Shader projects/8 Colors/blob.png" id="1_x2lx2"]
+[ext_resource type="Texture2D" uid="uid://0ng2b8mv8f1j" path="res://2 Shader projects/8 Colors/blob_raw.png" id="2_80v4j"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x2lx2"]
+shader = ExtResource("1_80v4j")
+shader_parameter/colors = PackedColorArray(0, 0, 0, 0, 0.16470589, 0.7921569, 0.8745098, 1, 0, 1, 1, 1, 0.011764706, 0.60784316, 0.65882355, 1, 0.015686275, 0.4392157, 0.47058824, 1, 0.015686275, 0.2901961, 0.30588236, 1, 1, 0.5294118, 0.36078432, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/gray_weights = Vector3(0.299, 0.587, 0.114)
+shader_parameter/vibrance = 0.50000002375
+
+[node name="Colors" type="Node2D" unique_id=982527243]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=414795601]
+texture_filter = 1
+material = SubResource("ShaderMaterial_x2lx2")
+texture = ExtResource("2_80v4j")
+
+[node name="Camera2D" type="Camera2D" parent="Sprite2D" unique_id=1031927690]
+zoom = Vector2(30, 30)
+
+[node name="Blob" type="Sprite2D" parent="." unique_id=1694008734]
+texture_filter = 1
+position = Vector2(-15, 0)
+texture = ExtResource("1_x2lx2")
