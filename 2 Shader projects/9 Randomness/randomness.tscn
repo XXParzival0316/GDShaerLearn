@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c72vui46el4fj"]
+
+[ext_resource type="Texture2D" uid="uid://cdyvecy3j6pjh" path="res://icon.svg" id="1_k8tr6"]
+[ext_resource type="Shader" uid="uid://q0qxsgnwsifv" path="res://2 Shader projects/9 Randomness/randomness.gdshader" id="2_qhbtm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nflpw"]
+shader = ExtResource("2_qhbtm")
+shader_parameter/static = 0.0
+shader_parameter/grid_size = 10.0
+
+[node name="Randomness" type="Node2D" unique_id=1994024867]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1575648092]
+material = SubResource("ShaderMaterial_nflpw")
+texture = ExtResource("1_k8tr6")
+
+[node name="Camera2D" type="Camera2D" parent="Sprite2D" unique_id=531404912]
+zoom = Vector2(5, 5)
